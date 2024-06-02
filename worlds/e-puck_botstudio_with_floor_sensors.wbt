@@ -1,0 +1,72 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/robots/gctronic/e-puck/protos/E-puckGroundSensors.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/rocks/protos/Rock.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation 0.3590792903767169 0.34490609595346766 -0.8672380573964052 1.6486037495522206
+  position -0.14185127089998376 0.8109134210684251 1.3754128970433013
+  follow "e-puck"
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  rotation 0 0 1 -1.5707953071795862
+  floorSize 1.2 1.8
+  floorTileSize 1.2 1.8
+  floorAppearance PBRAppearance {
+    baseColorMap ImageTexture {
+      url [
+        "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/robots/gctronic/e-puck/worlds/textures/oval_line.png"
+      ]
+    }
+    roughness 1
+    metalness 0
+  }
+}
+DEF E_PUCK E-puck {
+  hidden position_0_0 846.2330180142261
+  hidden position_0_1 809.5160047785591
+  hidden linearVelocity_0 -0.02679099437523197 0.00030105016321963635 -0.0010483244668113238
+  hidden angularVelocity_0 0.06724771656740869 -0.058084116433879084 0.9037495164828623
+  hidden translation_1 0 0.025999999999999884 0.02
+  hidden rotation_1 0 -1 0 4.475474762896528
+  hidden linearVelocity_1 -0.006933151939207677 0.010909128704964036 -0.0022434535970230433
+  hidden angularVelocity_1 2.4167588310587167 -4.498856010440653 0.9125196570366327
+  hidden translation_2 0 -0.026000000000000013 0.02
+  hidden rotation_2 0 -1 0 4.916477902388895
+  hidden linearVelocity_2 -0.047633875369464417 -0.011008880848607593 -0.00023216591111209102
+  hidden angularVelocity_2 1.2402173412697417 -2.2794122519659665 0.9081316430695549
+  translation 0.3771474035891279 -0.5632481128029468 2.3511877621342284e-05
+  rotation 0.005154592577034884 0.0029531461831932746 0.9999823543958091 -2.627193836862672
+  controller "lohith"
+  window "botstudio"
+  camera_width 40
+  camera_height 1
+  groundSensorsSlot [
+    DistanceSensor {
+      name "distance sensor 2"
+    }
+    DistanceSensor {
+      translation 0.05 0.02 0.02
+      type "infra-red"
+    }
+    E-puckGroundSensors {
+    }
+  ]
+}
+Rock {
+  translation 0 0.45 0.01
+}
+Rock {
+  translation 0.71 -0.21 0
+  name "rock(1)"
+}
